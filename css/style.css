@@ -1,0 +1,1451 @@
+@charset "utf-8";
+.wrap{
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+.red{
+    color:  #D71518;
+
+}
+
+.title{
+    padding: 2rem;
+    background: url(../images/title-bk.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+}
+
+.title-s{
+    font-size: 1.3rem;
+}
+
+.title h3{
+    padding-bottom: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.bold{
+    font-weight: bold;
+}
+/* ヘッダー */
+.header{
+    background: url(../images/header.jpg);
+    background-size: cover;
+    padding: 1rem 2rem 4rem;
+}
+
+.header-contents{
+    /* padding: 2rem; */
+}
+.logo-tesla-p .logo-nemy-img{
+    /* max-width: 250px; */
+    width: 20%;
+    padding-left: 20px;
+}
+.logo-tesla-p .logo-tesla-img{
+    max-width: 297px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-sp{
+    display: none;
+}
+
+.maincopy{
+    /* background: url(../images/copy-bk.png) no-repeat; */
+    background-size: contain;
+    padding:0 0 1rem 0 ;
+    /* width: 60%; */
+}
+
+/* nav */
+.humbergar{
+    position: relative;
+    display: none;
+}
+.humbergar span, .humbergar span:before, .humbergar span:after {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 0;
+    height: 4px;
+    width: 30px;
+    background-color: #FFF;
+    content: '';
+}
+.humbergar span:before {
+    top: 10px;
+}
+.humbergar span:after {
+    top: 20px;
+}
+.humbergar.active span{
+    background-color: rgba(255, 255, 255, 0);
+}
+.humbergar.active span:before {
+    top:0;
+    transform: rotate(45deg);
+}
+.humbergar.active span:after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+.humb-menu{
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #084686;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+}
+.humb-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:0;
+    padding:0;
+}
+.humb-menu li{
+    padding-bottom: 3rem;
+}
+.humb-menu a{
+    color: #FFF;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.humb-menu.open{
+    transform:translateX(-100%);
+    transition-duration: 0.8s;
+    opacity: 0.9;
+}
+
+/*header end*/
+
+
+/* nav */
+.main-menu ul{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+.main-menu li{
+    padding: 1rem 0 0rem 3rem;
+}
+.main-menu a{
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow:  1px  1px 1px rgba(255, 255, 255, 0) ,
+               -1px  1px 1px  rgba(255, 255, 255, 0) ,
+                1px -1px 1px  rgba(255, 255, 255, 0) ,
+               -1px -1px 1px  rgba(255, 255, 255, 0);
+}
+.main-menu a:hover{
+    color: #084686;
+    text-decoration: none;
+}
+
+@media screen and (max-width:991px){
+    .humbergar{
+        display: block;
+        margin-right: 15px;
+    }
+    .main-menu{
+        display: none;
+    }
+    .humb-menu{
+        display: block;
+    }
+
+}
+
+
+.maincopy img{
+    width: 60%;
+}
+
+.subcopy{
+    padding:1rem 0 2rem 0 ;
+}
+
+
+.subcopy img{
+    width: 40%;
+}
+
+/* 緊急事態は突然やってくる！ */
+.problem{
+    background: url(../images/problem-bk.png) no-repeat;
+    background-size: cover;
+}
+
+.probrem-title{
+    text-align: center;
+    background: #FFD500;
+    padding: 1rem;
+}
+
+.disaster{
+    padding: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.disaster-list{
+    min-height: 100px;
+    max-width: 360px;
+    display: flex;
+    padding-bottom: 1rem;
+    margin: 0 auto;
+}
+
+.disaster-content{
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+.disaster-content .ttl{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* 東日本大震災による事業への影響 */
+
+.impact{
+    text-align: center;
+    padding: 2rem;
+}
+
+.impact-title{
+    padding: 2rem;
+}
+
+.impact-graph img{
+    width: 70%;
+}
+
+.impact-detail{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+.impact-detail ul{
+    width: 80%;
+}
+.impact-detail li{
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.impact-text{
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.impact-source{
+    font-size: 0.9rem;
+}
+
+
+/* 大規模自然災害での電力停止期間 */
+.poweroutage{
+    text-align: center;
+    padding: 0 0 3rem 0;
+}
+
+.poweroutage-title{
+    padding: 2rem;
+}
+
+.poweroutage-table{
+    display: block;
+}
+
+.poweroutage-table-sp{
+    display: none;
+}
+.poweroutage-table img{
+    width: 70%;
+}
+
+.poweroutage-source{
+    font-size: 0.9rem;
+    padding-top: 1rem;
+}
+
+/* BCP（事業継続計画）とは？ */
+.bcp{
+    background: #F3F8FC;
+    text-align: center;
+    /* padding: 2rem; */
+    padding: 3rem 2rem;
+}
+.bcp-text p{
+    font-size: 1.2rem;
+}
+.bcp-sp{
+    display: none;
+}
+
+
+
+.risk{
+    padding-top: 2rem;
+}
+
+.risk-list{
+    margin: 0 0 1rem 3rem;
+}
+
+.risk-bk{
+    background: #fff;
+    padding: 2rem;
+}
+
+.risk-title{
+    display: flex;
+    align-items: center;
+}
+
+.risk-title h4{
+    color: #C00C00;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.risk-text{
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.bcp-safety{
+    padding: 3rem 0 2rem 0;
+
+}
+
+.bcp-safety h4{
+   line-height: 2em
+}
+
+.bcp-border{
+    border-bottom: solid 2px #C00C00;
+    padding: 0 0 0.5rem 0;
+}
+
+
+
+/* 企業に求められるBCP（事業継続計画）対策 */
+
+.solution{
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.solution-contents{
+    justify-content: center;
+    padding: 2rem;
+}
+
+.solution-box{
+    display: flex;
+    padding-bottom: 2rem;
+    align-items: center;
+}
+
+.solution-text{
+    text-align: left;
+    padding: 0 0 2rem 0;
+
+}
+
+.solution-text h4{
+    color:#224872;
+    padding-bottom: 1rem;
+}
+
+.measures-sp{
+    display: none;
+}
+
+.measures > h3{
+    background: #FFD500;
+    padding: 1rem;
+    margin: 2rem 0 3rem 0;
+}
+
+.measures p{
+    font-size: 1.2rem;
+}
+.measures-h2{
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.measures p{
+    /* padding: 1rem; */
+}
+
+.worries{
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
+
+.worry{
+    display: flex;
+
+    justify-content: center;
+    text-align: left;
+    padding: 1rem 0 0 0;
+
+}
+
+.worry-text{
+    padding-left: 1rem;
+}
+
+/* powerwall */
+.powerwall-sp{
+    display: none;
+}
+.place{
+    text-align:center;
+    background: #084686;
+    padding: 2rem;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.product{
+    background: #F3F8FC;
+    padding: 3rem 0 2rem 0;
+}
+/* .product .container{
+    max-width: 900px;
+} */
+
+.product-left{
+    text-align: center;
+}
+
+.product-copy{
+    padding-bottom: 2rem;
+    font-weight: bold;
+}
+.product-contents{
+    display: flex;
+}
+.product-box{
+    display: flex;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0.5rem;
+    align-items: center;
+    flex-basis: 48%;
+}
+.product-check img{
+    max-width: 32px;
+}
+
+
+.product-text{
+    padding-left: 1.2rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.product-right img{
+    margin-left: -5rem;
+}
+
+
+
+
+/* 東日本大震災の教訓を踏まえた
+事業継続の備えと6つの特徴 */
+
+.point{
+    text-align: center;
+    padding: 3rem 0 5rem 0;
+}
+
+.point-contents{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.point-contents-sp{
+    display: none;
+
+}
+
+.point-box{
+    text-align: left;
+    padding: 0 1rem 1rem 1rem;
+    flex-basis: 35%;
+}
+
+.point-number{
+    margin-bottom: -2rem;
+    padding: 0 0 0 2rem;
+}
+.point-text{
+    min-height: 190px;
+    text-align: left;
+    padding: 2rem;
+    border: solid 1px #D9D9D9;
+    border-radius: 10px;
+}
+
+.point-title{
+    color: #084686;
+    padding: 0 0 0.5rem 0;
+    border-bottom: solid 1px #084686;
+    font-weight: bold;
+}
+
+/* セキュリティ */
+.security{
+    display: block;
+    background: url(../images/security-bk.png) no-repeat;
+    background-size: cover;
+    padding: 2rem;
+}
+
+.security-sp{
+    display: none;
+}
+
+.security-contents{
+    padding: 2rem;
+}
+
+
+.security-content{
+    display: flex;
+    padding: 0 2rem;
+    align-items: flex-start;
+}
+
+.security-box{
+    min-height: 265px;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem 2rem 2rem;
+    margin: 0 0.5rem;
+
+}
+
+.security-text{
+    text-align: left;
+}
+
+
+.security-icon{
+    padding: 1rem;
+}
+
+.feature-copy{
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-copy-main{
+    font-weight: bold;
+    padding-top: 0.5rem;
+}
+
+.feature-copy-l{
+    text-align: left;
+}
+
+.feature-copy-r{
+    text-align: left;
+    padding: 0 0 0 2rem;
+}
+
+/* コントロール */
+.control{
+    background: #191919;
+    color: #fff;
+    padding: 2rem;
+}
+
+.control-contents{
+    align-items: center;
+}
+
+.control-points{
+    padding: 0 0 2rem 1rem;
+}
+
+.control-point{
+    display: flex;
+    align-items: center;
+}
+
+.control-text{
+    padding: 0 0 0 1rem;
+}
+
+/* デザイン */
+.design{
+    display: block;
+    background: url(../images/design-bk.png) no-repeat;
+    background-size: cover;
+    padding: 2rem;
+}
+.design-sp{
+    display: none;
+}
+
+/* Powerwall 仕様 */
+.specification{
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+
+}
+
+
+.specification-contents{
+align-items: center;
+}
+
+
+.specification-detail{
+    text-align: left;
+    padding: 0 0 2rem 0;
+}
+
+/* 多業界で選ばれているのがテスラPowerwall */
+.example{
+    background: #F3F8FC;
+    padding:0;
+}
+.example-sp{
+    display: none;
+}
+
+.example-left{
+    padding: 1rem;
+}
+
+
+.example-right{
+    text-align: center;
+    justify-content: center;
+}
+
+.example-list{
+    display: flex;
+    /* padding: 0.5rem; */
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+.example-place{
+    background: #fff;
+    border: solid 1px #084686;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    margin: 0.3rem 0.2rem;
+    flex-basis: 30%;
+}
+
+/* BCP対策の補助金ってどうやって申請したらいいんだろう? */
+
+.contact{
+    padding: 2rem 0;
+}
+
+.contact-contents{
+    padding-bottom: 4rem;
+}
+
+.contact-left{
+    text-align: center;
+}
+.contact-img{
+    margin-top: 20px;
+}
+
+.contact-button-area{
+    background: #084686;
+    background-size: cover;
+    text-align: center;
+    padding: 40px 0;
+}
+
+button{
+    /* background: #fff; */
+    background: #2b95ff;
+    border-radius: 78px;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.contact-button{
+    padding:1rem 2rem;
+    /* margin: 1rem; */
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* color: #084686; */
+    color: #fff;
+    /* background-image: linear-gradient(#6795fd 0%, #67ceff 100%); */
+    background-image: linear-gradient(#fac022 0%, #f86300 60%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* border-bottom: solid 3px #5e7fca; */
+}
+.contact-button:hover{
+    opacity: 0.9;
+    transform: translateY(2px);
+}
+.contact-button i{
+    font-size: 1.2rem;
+    /* color: #084686; */
+    color: #fff;
+    margin-left: 1rem;
+}
+
+/* ネミーについて */
+.nemy{
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.nemy-logo{
+    padding: 2rem;
+}
+
+.nemy-contents{
+    align-items: center;
+    padding: 2rem;
+}
+
+.nemy-img{
+    width: 80%;
+}
+
+.nemy-text{
+    text-align: left;
+}
+
+.nemy-text h4{
+    color: #224872;
+    padding: 1rem 0;
+}
+
+/* 設置までの流れ */
+.flow{
+    background: #F3F8FC;
+    justify-content: center;
+    padding: 3rem 0 2rem 0;
+}
+
+.flow-contents{
+    padding: 2rem 0;
+    justify-content: center;
+
+}
+
+.flow-box{
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    /* width:70em; */
+    margin: 2rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.flow-icon img{
+    padding: 1rem 2rem 1rem 0;
+    flex-basis:30%;
+}
+
+.flow-text{
+    padding: 0 1rem;
+    flex-basis:70%;
+}
+
+.flow-text span{
+    border-bottom: solid 1px #224872;
+    font-weight: bold;
+    color: #084686;
+}
+
+.flow-text p{
+    padding-top: 0.3rem;
+
+}
+
+/* よくある質問 */
+
+.qanda{
+    padding: 3rem 0 2rem 0;
+    justify-content: center;
+}
+
+.qanda-contents{
+    /* display: flex; */
+    justify-content: center;
+}
+
+
+.qanda-content{
+    padding-bottom:1rem;
+}
+.qanda-area{
+    padding: 2rem;
+}
+
+.q-box{
+    display: flex;
+    align-items: center;
+    border: solid 1px #D9D9D9;
+    border-radius: 10px;
+    padding: 1rem;
+    /* margin: 1rem; */
+    margin: 1rem 1rem 0.5rem 0;
+}
+
+.q{
+    font-weight: bold;
+    color: #084686;
+    font-size: 2rem;
+}
+
+.q-text{
+    padding-left: 1rem;
+    color: #084686;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.a-text{
+    padding: 0.5rem 1rem 2rem 1rem;
+    flex-wrap: wrap;
+    /* font-size: 1.2rem; */
+}
+
+/* footer */
+.footer{
+    background-color: #084686;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+}
+
+/**********************************************
+    スマホサイズ（768px以下）
+***********************************************/
+@media screen and (max-width:768px){
+    .title{
+        margin: 0 0 0.5rem 0;
+        padding: 1rem 1rem;
+        background-size: cover;
+    }
+    .title h3{
+        font-size: 1rem;
+    }
+
+    /* ヘッダー */
+.header{
+    background: url(../images/header-s.png);
+    background-size: cover;
+    padding: 0;
+    /* height: 800px; */
+}
+
+.header-contents{
+    display: none;
+}
+
+.header-sp{
+    display: block;
+}
+
+.maincopy-sp{
+    background: #084686;
+    color: #fff;
+    text-align: center;
+}
+
+.maincopy-sp h1{
+    font-size: 1.6rem;
+    /* padding: 1rem; */
+    padding: 1.3rem 1.3rem 2rem;
+}
+
+.logo-tesla-p .logo-nemy-img{
+    width: 40%;
+    padding: 1rem 0 0 1rem;
+}
+.logo-tesla-p .logo-tesla-img{
+    width: 55%;
+    padding: 0 0 0 0.5rem;
+}
+
+.subcopy-sp{
+    align-items: flex-end;
+    background: #fff;
+    text-align: center;
+    margin: 25rem 0 2rem 0;
+}
+
+.subcopy-sp h2{
+    font-size: 1.2rem;
+    padding: 2rem 0 1rem 0;
+    color: #084686;
+}
+
+/* 緊急事態は突然やってくる！ */
+
+.probrem-title h2{
+    font-size: 1.6rem;
+}
+.disaster{
+    max-width: 350px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* 東日本大震災による事業への影響 */
+.impact{
+    margin-bottom: 1rem;
+}
+.impact-title{
+    /* padding: 2rem 0 1rem 0 ; */
+    padding: 3rem 0 1rem 0 ;
+}
+
+.impact-title h3{
+    font-size: 1.4rem;
+}
+.impact-graph img{
+    width: 100%;
+    padding: 1rem;
+}
+
+.impact-detail ul{
+text-align: left;
+width: 100%;
+padding: 0 1rem;
+}
+
+.impact-source{
+    padding: 0 2rem;
+}
+
+/* 大規模自然災害での電力停止期間 */
+
+.poweroutage-title{
+    /* padding: 2rem 0 1rem 0 ; */
+    padding: 3rem 0 1rem 0 ;
+}
+
+.poweroutage-title h3{
+    font-size: 1.4rem;
+}
+
+.poweroutage-table{
+    display: none;
+}
+
+.poweroutage-table-sp{
+    display: block;
+}
+
+.poweroutage-table-sp img{
+    width: 90%;
+}
+
+/* BCP（事業継続計画）とは？ */
+
+.bcp{
+    display: none;
+}
+
+.bcp-sp{
+    display: block;
+    background: #F3F8FC;
+    text-align: center;
+    /* padding: 1rem 2rem 2rem 2rem; */
+    padding: 3rem 1rem;
+}
+
+.bcp-title-sp{
+    padding: 0.5rem 0;
+}
+
+.risk{
+    padding: 1rem 0;
+
+}
+.container{
+    padding: 0;
+}
+
+.bcp-text p{
+    text-align: left;
+    padding: 1rem 0;
+}
+
+.bcp-text-sp{
+    font-size: 1.3rem;
+}
+
+.bcp-text h4{
+    padding: 0 2rem;
+
+}
+
+.risk-title h4{
+    font-size: 1rem;
+}
+
+.risk-bk{
+    justify-content: center;
+}
+.risk-list{
+    margin:1rem;
+}
+
+.risk-text {
+    text-align: left;
+
+}
+
+.bcp-safety{
+    padding: 0;
+}
+
+.bcp-img{
+    width: 100%;
+    padding: 1rem;
+}
+
+.bcp-safety h4{
+    line-height: 1.6em
+ }
+
+.bold{
+    font-size: 1.2rem;
+}
+
+.bcp-border{
+    padding: 0;
+}
+
+/* 企業に求められるBCP（事業継続計画）対策 */
+.solution{
+    /* padding: 1rem 2rem 0 2rem; */
+    padding: 3rem 1rem 2rem;
+}
+
+.solution-title-sp{
+    font-size: 0.5rem;
+    padding: 0.6rem 0 0 0;
+}
+
+.solution-contents{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.solution-box{
+    padding: 0;
+}
+
+/* .solution-img{
+    width: 100%;
+} */
+
+.solution-text{
+    padding: 2rem 2rem;
+}
+.measures{
+    display: none;
+}
+
+.measures-sp{
+    display: block;
+}
+
+.measures-title-sp{
+    padding:0;
+}
+
+.measures > h3{
+    background: #FFD500;
+    padding: 1rem;
+    margin: 2rem 0 3rem 0;
+}
+.measures h3{
+    margin: 1rem 0 1rem 0;
+}
+.measures p{
+    padding: 1rem;
+}
+.measures-sp > h3{
+    background: #FFD500;
+    padding: 1rem;
+    margin: 2rem 0 3rem 0;
+}
+
+
+/* .measures span{
+    font-size: 1.5rem;
+} */
+
+.worries{
+    padding:0 2rem;
+}
+
+.worry-text{
+font-size: 1.2rem;
+}
+
+.solution-key{
+    font-size: 1.3rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* powerwall */
+
+.powerwall{
+    display: none;
+}
+
+.powerwall-sp{
+    display: block;
+}
+
+/* .product-logo{
+    padding: 0 2rem;
+} */
+
+.product-contents{
+    padding: 0 0.8rem;
+}
+.product-box{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.product-check img{
+    max-width: 32px;
+    margin-bottom: 20px;
+}
+.product-text{
+    padding: 0;
+}
+
+.place{
+    text-align:center;
+    background: #084686;
+    padding: 2.4rem;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.product{
+    /* padding: 1rem; */
+    padding: 2rem 1rem;
+}
+
+.product-copy{
+    padding-bottom: 0;
+}
+
+.product-text{
+    font-size: 1.1rem;
+}
+
+.product-right img{
+    margin:0;
+}
+
+/* 東日本大震災の教訓を踏まえた
+事業継続の備えと6つの特徴 */
+.point{
+    /* padding: 0 2rem; */
+    padding: 1rem 1rem;
+}
+
+.point-title-sp{
+   padding: 0.5rem 0 0 0;
+}
+.point-contents{
+    display: none;
+}
+
+.point-title{
+    font-size: 1.3rem;
+}
+.point-contents-sp{
+    display: block;
+    flex-direction: column;
+    padding: 0 0 1rem 0;
+}
+
+.point-text{
+    min-height: 100px;
+    padding: 2rem;
+}
+
+/* セキュリティ */
+
+.security{
+    display: none;
+}
+
+.security-sp{
+    display: block;
+    background: #F3F7FF;
+    /* padding: 1rem 2rem; */
+    padding: 2rem;
+}
+
+.sec-img-sp{
+    padding: 0 0 1rem 0;
+    justify-content: center;
+    text-align: center;
+}
+
+.security-contents{
+    text-align: center;
+}
+
+.security-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+
+
+.feature-copy-r{
+    padding: 0;
+}
+
+.security-box{
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+    width: 300px;
+}
+
+.security-text{
+    text-align: center;
+
+}
+
+/* コントロール */
+
+.control-img{
+    text-align: center;
+    padding: 2rem;
+}
+
+.control-text{
+    font-size: 1.3rem;
+}
+/* デザイン */
+.design{
+    display: none;
+}
+
+.design-sp{
+    display: block;
+    /* padding: 1rem 2rem; */
+    padding: 2rem 2rem 3rem;
+}
+
+.security-img{
+    text-align: center;
+}
+.security-box-border{
+    text-align: center;
+    border: solid 1px #D9D9D9;
+    border-radius: 10px;
+    padding: 1.5rem 2rem 2rem;
+    margin: 1rem;
+    width: 300px;
+}
+
+/* Powerwall 仕様 */
+.specification{
+    padding: 0 2rem;
+}
+
+.specification-title-sp{
+    padding: 0.5rem 0 0 0;
+}
+.specification-img img{
+    width: 80%;
+}
+
+.specification-contents{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    }
+
+
+.specification-detail{
+    text-align: left;
+    padding: 0 0 2rem 0;
+}
+
+/* 多業界で選ばれているのがテスラPowerwall */
+.example{
+    display: none;
+}
+
+.example-sp{
+    display: block;
+    /* padding: 0 2rem; */
+    padding: 2rem 2rem;
+}
+
+.example-title-sp{
+    padding: 1rem 0 0 0;
+}
+.example-left{
+    padding: 0 1rem 2rem 1rem;
+}
+.example-place{
+    padding: 0.5rem;
+    margin: 0.3rem 0.2rem;
+    font-size: 0.8rem;
+    flex-basis: 33%;
+}
+
+/* BCP対策の補助金ってどうやって申請したらいいんだろう? */
+
+.contact{
+    /* padding: 1rem 0; */
+    padding: 2rem 0 2rem;
+}
+
+.contact-contents{
+    padding: 0;
+}
+
+.contact-sp{
+    min-height: 100px;
+    padding: 0 2rem;
+}
+.contact-sp .title-s{
+    padding: 1.3rem 0;
+}
+
+.contact-rigtht{
+    padding: 0;
+}
+
+/* ネミーについて */
+
+.nemy-img{
+    width: 100%;
+}
+/* ネミーについて */
+.nemy{
+    padding: 0 2rem;
+}
+
+.nemy-logo{
+    padding: 0 2rem;
+}
+
+.nemy-contents{
+    padding: 2rem 0;
+}
+.nemy-text h4{
+    font-size: 1.2rem;
+}
+
+/* 設置までの流れ */
+.flow{
+    /* padding: 0 2rem; */
+    padding: 2rem 2rem;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.flow-contents{
+    /* padding:0 0 2rem 0; */
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.flow-box{
+    flex-direction: column;
+    padding: 0;
+    max-width: 400px;
+    margin-top:1rem;
+    justify-content: center;
+    text-align: center;
+    margin: 16px auto 32px;
+}
+
+.flow-icon img{
+    padding: 2rem;
+    flex-basis:100%;
+}
+
+.flow-text{
+    padding: 0 1rem;
+    flex-basis:100%;
+    text-align: center;
+}
+
+.flow-text p{
+    text-align: left;
+}
+
+/* よくある質問 */
+
+.qanda{
+    /* padding: 1rem 2rem; */
+    padding: 2rem 2rem;
+}
+
+.qanda-content{
+    padding-bottom:0;
+}
+.qanda-area{
+    padding: 0;
+}
+
+.a-text{
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+
+}
+
